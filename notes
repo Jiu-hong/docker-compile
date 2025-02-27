@@ -1,0 +1,24 @@
+# compile casper-node - method1
+docker build --no-cache -f casper-node.Dockerfile  --output  . -t casper-node  .
+
+# compile casper-node - method2
+docker build --no-cache -f casper-node_1.Dockerfile --output . .
+
+#compile casper-sidecar
+docker build --no-cache -f casper-sidecar.Dockerfile  --output  . -t casper-sidecar  .
+
+# compile casper-client
+docker build --no-cache -f casper-client.Dockerfile  --output  . -t casper-client  .
+
+# compile casper-contract
+docker build --no-cache -f contract.Dockerfile  --output  . -t contract  .
+
+# compile casper-client 1.5 version on ubuntu 20.04
+docker build --no-cache -f casper-client-1.5-20.04.Dockerfile  --output  . -t casper-client  .
+
+# compile casper-client 1.5 version on ubuntu 22.04
+docker build --no-cache -f casper-client-1.5-22.04.Dockerfile  --output  . -t casper-client  .
+
+docker build --no-cache -f global-state-update-gen_1.5.Dockerfile  --output  . -t global-state-update-gen  .
+
+docker build --no-cache -f global-state-update-gen_2.0.Dockerfile  --output  . -t global-state-update-gen  .
